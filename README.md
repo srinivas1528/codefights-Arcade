@@ -1,2 +1,3 @@
-This repository contains solutions to the codefights basic algorithm challenges. 
+Gives the solutions for the basic solutions while dealing with the Codefights basic algoithm solutions. Kindly recommend changes for any alternative approach.
+
 # codefights-Arcade
