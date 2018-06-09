@@ -1,0 +1,50 @@
+/* ======= Question ==========
+Given two strings, find the number of common characters between them.
+
+Example
+
+For s1 = "aabcc" and s2 = "adcaa", the output should be
+commonCharacterCount(s1, s2) = 3.
+
+Strings have 3 common characters - 2 "a"s and 1 "c".
+
+*/
+
+ ========= Soltion (Java)  ==============
+int commonCharacterCount(String s1, String s2) {
+    int count = 0;
+    HashMap <Character, Integer> map1 =new HashMap();
+    for(int i =0 ; i<s1.length(); i++){
+        char char1  = s1.charAt(i);
+        if(map1.containsKey(char1)){
+            map1.put(char1, map1.get(char1)+1);
+        }
+        else{
+            map1.put(char1,1);
+        }        
+    }
+    HashMap <Character, Integer> map2 =new HashMap();
+    for(int i =0 ; i<s2.length(); i++){
+       char char2  = s2.charAt(i);
+        if(map2.containsKey(char2)){
+            map2.put(char2, map2.get(char2)+1);
+        }
+        else{
+            map2.put(char2,1);
+        }        
+    }
+    int value =0;
+    for(Character c1 : map1.keySet()){
+        for(Character c2 : map2.keySet()){
+         if(c1 == c2){
+             if(map1.get(c1) >= map2.get(c2)){
+                 value += map2.get(c2);
+             }
+             else{
+                 value += map1.get(c1);
+             }
+         }   
+        }
+    }     
+   return value; 
+}
