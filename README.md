@@ -1,3 +1,3 @@
-Gives the solutions for the basic solutions while dealing with the Codefights basic algoithm solutions. Kindly recommend changes for any alternative approach.
+Gives the solutions for the basic problems while dealing with the Codefights basic algorithmic questions. Kindly recommend changes for any alternative approach.
 
 # codefights-Arcade
