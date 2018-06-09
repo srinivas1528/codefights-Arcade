@@ -29,7 +29,6 @@ int adjacentElementsProduct(int[] inputArray) {
       List<Integer> values = new ArrayList();
     for(int i =0 ; i < inputArray.length-1; i++){
         int result = inputArray[i]* inputArray[i+1];
-      
         values.add(result);
     }   
     Collections.sort(values);
