@@ -26,5 +26,28 @@ int makeArrayConsecutive2(int[] statues) {
     int difference = lastNumber- firstNumber;
     int size = numbers.size();
     return difference-size+1;    
-
 }
+
+ ========= Soltion (C#)  ==============
+ 
+int makeArrayConsecutive2(int[] statues) {
+    Array.Sort(statues);
+    List<int> numbers = new List<int>();
+    for(int i=0; i < statues.Length; i++){
+        numbers.Add(statues[i]);        
+    }
+    int firstNumber = numbers[0];
+    int lastNumber = numbers.Last();
+    
+    int difference = lastNumber- firstNumber;
+    int size = numbers.Count;
+    return difference-size+1;    
+}
+
+
+
+
+
+
+
+
