@@ -21,3 +21,19 @@ boolean checkPalindrome(String inputString) {
     }
     return false;
 }
+
+
+ ========= Soltion (C#)  ==============
+bool checkPalindrome(string inputString){   
+    char[] array = inputString.ToCharArray(); 
+    Array.Reverse(array);
+    Console.WriteLine(array);
+     string s = new string(array);
+    if(s.Equals(inputString)){
+        return true;
+    }
+    return false;    
+}
+
+
+
