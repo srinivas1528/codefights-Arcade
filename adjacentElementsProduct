@@ -24,7 +24,7 @@ Guaranteed constraints:
 The largest product of adjacent elements.
 */
 
-Solution--
+======= Solution(Java) ==========
 int adjacentElementsProduct(int[] inputArray) {
       List<Integer> values = new ArrayList();
     for(int i =0 ; i < inputArray.length-1; i++){
@@ -33,4 +33,15 @@ int adjacentElementsProduct(int[] inputArray) {
     }   
     Collections.sort(values);
     return values.get(values.size()-1);
+}
+
+======= Solution(C#) ==========
+
+int adjacentElementsProduct(int[] inputArray) {
+   List<int> values = new List<int>();
+    for(int i =0 ; i < inputArray.Length-1; i++){
+        int result = inputArray[i]* inputArray[i+1];
+        values.Add(result);
+    }   
+    return values.Max();
 }
