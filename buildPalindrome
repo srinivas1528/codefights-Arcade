@@ -1,0 +1,65 @@
+/* ======= Question ==========
+Given a string, find the shortest possible string which can be achieved by adding characters to the end of initial string to make it a palindrome.
+
+Example
+
+For st = "abcdc", the output should be
+buildPalindrome(st) = "abcdcba".
+
+Input/Output
+
+[execution time limit] 3 seconds (java)
+
+[input] string st
+
+A string consisting of lowercase latin letters.
+
+Guaranteed constraints:
+3 ≤ st.length ≤ 10.
+
+[output] string
+*/
+
+
+//Time Complexity and space complexity will be O(n)
+ ========= Soltion (Java)  ==============
+ 
+ String buildPalindrome(String st) {
+
+    String reserveString = new StringBuilder(st).reverse().toString();   
+    System.out.println(reserveString);  
+    int reverseLength = reserveString.length();
+    int normalLength = st.length();
+    int i = 0;
+    int j = 0;
+    
+    while(i < reverseLength && j < normalLength){
+        char reverseTemp = reserveString.charAt(i);
+        char normalTemp = st.charAt(j);
+        
+        if(reverseTemp != normalTemp){
+            i = 0;
+            j++;    
+        }
+        else{
+            i++;
+            j++;
+        }
+        
+    }
+    List<Character> list = new ArrayList();
+    while(i<reverseLength){
+        char revTemp = reserveString.charAt(i);
+        list.add(revTemp);
+        i++;
+    }
+    System.out.println(list);
+    //covert list to a string 
+    String res =st+"";
+    for(int value=0; value < list.size(); value++){
+        res =res+list.get(value);
+    }
+    return res; 
+}
+ 
+ 
